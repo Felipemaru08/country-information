@@ -1,0 +1,10 @@
+.hb-MainLayout {
+  @apply flex flex-col min-h-screen;
+}
+.hb-MainLayout__header:empty,
+.hb-MainLayout__footer:empty {
+  @apply hidden;
+}
+.hb-MainLayout__children {
+  @apply flex-1 flex flex-col w-full mx-auto my-5;
+}

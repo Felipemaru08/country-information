@@ -12,7 +12,13 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens: {
+        sm: '640px', // Pequeñas pantallas como smartphones
+        md: '768px', // Pantallas medianas como tablets
+        lg: '1024px', // Pantallas grandes como laptops
+        xl: '1280px', // Pantallas extra grandes como monitores
+      },
     },
   },
   plugins: [],
-}
+};

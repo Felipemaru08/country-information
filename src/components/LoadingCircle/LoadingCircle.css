@@ -1,0 +1,12 @@
+.hb-LoadingCircle {
+  @apply inline-block w-[1em] h-[1em] align-middle animate-[animate-loadingcircle_1s_linear_infinite] rounded-[50%] border-t-[currentcolor] border-[0.2em] border-solid border-[rgba(0,0,0,0.1)];
+}
+.hb-LoadingCircle--size-small {
+  @apply w-6 h-6 border-4;
+}
+.hb-LoadingCircle--size-medium {
+  @apply w-14 h-14 border-[6px];
+}
+.hb-LoadingCircle--size-large {
+  @apply w-[90px] h-[90px] border-[12px];
+}
