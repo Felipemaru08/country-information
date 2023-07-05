@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prueba Técnica - Explicación de la Arquitectura
 
-## Getting Started
+En esta prueba técnica, se utilizó la última versión de **Next.js v13** para resolver el reto propuesto. A continuación, se detallan las generalidades de cómo se resolvió el desafío y la arquitectura propuesta.
 
-First, run the development server:
+## Tecnologías Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **App Router:** Se utilizó el enrutador de aplicaciones (app router) proporcionado por Next.js para gestionar la navegación dentro de la aplicación.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Dynamic Next.js:** Se hizo uso de la funcionalidad "dynamic" de Next.js para mejorar la página y optimizar la carga de componentes.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Patrón de Diseño Contenedor y Visualizador:** Se aplicó el patrón de diseño contenedor (container) y visualizador (presentational) para separar la lógica de negocio de la visualización de los datos. El contenedor se encarga de manejar la lógica y los estados de la aplicación, mientras que los componentes visuales se enfocan en mostrar los datos y responder a las interacciones del usuario.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Principios SOLID:** Se aplicó el primer principio SOLID (Single Responsibility Principle), para lograr una mejor organización y modularidad del código. Cada componente y función tiene una única responsabilidad, lo que facilita su mantenimiento y reutilización.
 
-## Learn More
+- **React Query:** Se utilizó React Query para gestionar el estado del API en la aplicación. React Query es una biblioteca de gestión de estados que simplifica el manejo de los datos provenientes de una API. Facilita la obtención, actualización y manejo de la caché de los datos, mejorando la eficiencia y la experiencia del usuario.
 
-To learn more about Next.js, take a look at the following resources:
+- **Axios:** Se utilizó Axios como cliente HTTP para realizar las solicitudes a la API.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Cypress:** Se utilizó Cypress para las pruebas unitarias. Se crearon pruebas simples en la carpeta "componentes" para verificar el correcto funcionamiento de los componentes individuales.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Una buena práctica es hacer 1 commit por cada funcionalidad, utilizando commits pequeños pero frecuentes.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Esto significa que en lugar de realizar un solo commit con todos los cambios de una vez, es preferible realizar varios commits más pequeños a medida que se avanza en el desarrollo de una funcionalidad. Cada commit debería representar un cambio o una adición significativa y estar relacionado con una sola funcionalidad o tarea.
