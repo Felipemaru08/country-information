@@ -1,1 +1,1 @@
-export * from './viewDashboard';
+export * from './ViewDashboard';
