@@ -1,12 +1,44 @@
-.hb-LoadingCircle {
-  @apply inline-block w-[1em] h-[1em] align-middle animate-[animate-loadingcircle_1s_linear_infinite] rounded-[50%] border-t-[currentcolor] border-[0.2em] border-solid border-[rgba(0,0,0,0.1)];
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid green;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  animation: pulse 1s linear infinite;
 }
-.hb-LoadingCircle--size-small {
-  @apply w-6 h-6 border-4;
+.loader:after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 5px solid green;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp 1s linear infinite;
 }
-.hb-LoadingCircle--size-medium {
-  @apply w-14 h-14 border-[6px];
+
+@keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
-.hb-LoadingCircle--size-large {
-  @apply w-[90px] h-[90px] border-[12px];
+@keyframes pulse {
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
 }

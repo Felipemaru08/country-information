@@ -20,9 +20,10 @@ const CountryCard = (props) => {
       <Image
         className='rounded-t-lg w-full h-40 object-cover'
         src={country.flags.svg}
-        alt={country.flags.alt}
+        alt={country.flags.alt ?? 'Country'}
         width={500}
         height={500}
+        priority={true}
       />
       <section className='p-5'>
         <h2 className='font-semibold text-sm mb-5'>{country.name.common}</h2>
